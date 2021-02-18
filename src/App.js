@@ -6,7 +6,6 @@ function App() {
     <div>
    <h1>Hi</h1>
    <ErrorInput/>
-    
     </div>
   );
 }

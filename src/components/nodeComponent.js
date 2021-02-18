@@ -1,11 +1,15 @@
 import React from 'react';
 import axios from "axios";
- const NodeComp=()=>{
-   
+const NodeComp=(props)=>{
+console.log('http://localhost:5000/'+props.dataA)
+  axios.get('http://localhost:5000/'+props.dataA).then((aaa)=>console.log(aaa));
+  
+
   return (
-  <asdasdaa>
-      <h1>this is Comp</h1>
-      </asdasdaa>
+  <>
+      <h1>Hey</h1>
+      <h2>{props.dataA}</h2>
+      </>
   );
 }
 

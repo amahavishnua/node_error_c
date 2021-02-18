@@ -2,6 +2,7 @@ import React from 'react';
 
 import NodeComp from './nodeComponent';
 class ErrorInput extends React.Component {
+    
     constructor(props) {
       super(props);
       this.state = {value: ''};
@@ -15,11 +16,15 @@ class ErrorInput extends React.Component {
     }
   
     handleSubmit(event) {
+        
+        
       alert('A name was submitted: ' + this.state.value);
+      
       event.preventDefault();
     }
   
     render() {
+        const ErrInput=this.state.value;
       return (
           <>
         <form onSubmit={this.handleSubmit}>
@@ -30,7 +35,7 @@ class ErrorInput extends React.Component {
           <input type="submit" value="Submit" />
         </form>
 
-<NodeComp />
+        <NodeComp dataA={ErrInput} />
 </>
       );
     }
