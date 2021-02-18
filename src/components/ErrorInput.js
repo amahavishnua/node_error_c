@@ -1,4 +1,6 @@
 import React from 'react';
+
+import NodeComp from './nodeComponent';
 class ErrorInput extends React.Component {
     constructor(props) {
       super(props);
@@ -19,6 +21,7 @@ class ErrorInput extends React.Component {
   
     render() {
       return (
+          <>
         <form onSubmit={this.handleSubmit}>
           <label>
             Name:
@@ -26,6 +29,9 @@ class ErrorInput extends React.Component {
           </label>
           <input type="submit" value="Submit" />
         </form>
+
+<NodeComp />
+</>
       );
     }
   }
